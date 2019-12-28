@@ -1,11 +1,10 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import TabViewExample from "./Tab";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Fakebook!</Text>
-    </View>
+      <TabViewExample />
   );
 }
 
