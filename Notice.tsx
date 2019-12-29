@@ -1,9 +1,10 @@
 import {StyleSheet, Text, View} from "react-native";
 import * as React from "react";
+import {Page} from "./components/Notice/Page";
 
 export const Notice = () => (
     <View style={[styles.scene, { backgroundColor: '#fff' }]} >
-        <Text>Hello Fakebook Notice</Text>
+        <Page/>
     </View>
 );
 
