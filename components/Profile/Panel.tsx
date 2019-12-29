@@ -1,6 +1,7 @@
 import {Image, StyleSheet, Text, View} from "react-native";
 import * as React from "react";
 import {Icons} from "./Icons";
+import {CareerList} from "./CareerList";
 
 export const Panel = () => (
     <View style={{ backgroundColor: '#fff'}}>
@@ -15,6 +16,7 @@ export const Panel = () => (
             <Text>nyaaaaaaaaaaan</Text>
         </View>
         <Icons />
+        <CareerList />
     </View>
 );
 

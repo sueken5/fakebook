@@ -1,10 +1,13 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Tab from "./Tab";
+import {SafeAreaProvider} from "react-native-safe-area-context";
 
 export default function App() {
   return (
-      <Tab />
+      <SafeAreaProvider>
+        <Tab />
+      </SafeAreaProvider>
   );
 }
 

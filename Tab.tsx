@@ -7,6 +7,7 @@ import {Group} from "./Group";
 import {Profile} from "./Profile";
 import {Notice} from "./Notice";
 import {Setting} from "./Setting";
+import SafeAreaView from "react-native-safe-area-view";
 
 const initialLayout = { width: Dimensions.get('window').width };
 
@@ -31,13 +32,15 @@ export default function Tab() {
     });
 
     return (
-        <TabView
-            navigationState={{index, routes}}
-            renderScene={renderScene}
-            onIndexChange={setIndex}
-            initialLayout={initialLayout}
-            style={styles.container}
-        />
+        <SafeAreaView style={{ flex: 1 }}>
+            <TabView
+                navigationState={{index, routes}}
+                renderScene={renderScene}
+                onIndexChange={setIndex}
+                initialLayout={initialLayout}
+                style={styles.container}
+            />
+        </SafeAreaView>
     );
 }
 
