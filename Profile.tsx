@@ -1,16 +1,15 @@
-import {StyleSheet, Text, View} from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import * as React from "react";
-import {Panel} from "./components/Profile/Panel";
+import { Page } from "./components/Profile/Page";
 
 export const Profile = () => (
-    <View style={[styles.scene, { backgroundColor: '#fff' }]} >
-        <Text>Hello Fakebook Profile</Text>
-        <Panel />
-    </View>
+  <View style={[styles.scene, { backgroundColor: "#fff" }]}>
+    <Page />
+  </View>
 );
 
 const styles = StyleSheet.create({
-    scene: {
-        flex: 1,
-    },
+  scene: {
+    flex: 1
+  }
 });
