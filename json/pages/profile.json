@@ -1,0 +1,38 @@
+{
+  "self": {
+    "id": "u-111",
+    "name": "猫太郎",
+    "iconURL":
+    "https://sociopouch.files.wordpress.com/2019/08/8y3a8062.jpg?w=640&h=640",
+    "backgroundImageURL": "https://www.newsweekjapan.jp/stories/assets_c/2017/04/iStock-501152239b-thumb-720xauto-110669.jpg",
+    "careers": [
+      {
+        "id": "c-111",
+        "type": "school",
+        "text": "猫又学園",
+        "createdAt": 1577676309
+      }
+    ]
+  },
+  "friends": [
+    {
+      "id": "u-111",
+      "name": "猫太郎",
+      "iconURL":
+      "https://sociopouch.files.wordpress.com/2019/08/8y3a8062.jpg?w=640&h=640"
+    }
+  ],
+  "posts": [
+    {
+      "id": "p-111",
+      "user": {
+        "id": "u-111",
+        "name": "猫太郎",
+        "iconURL":
+        "https://sociopouch.files.wordpress.com/2019/08/8y3a8062.jpg?w=640&h=640"
+      },
+      "text": "hello world",
+      "createdAt": 1577675589
+    }
+  ]
+}

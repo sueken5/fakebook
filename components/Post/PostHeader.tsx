@@ -9,7 +9,7 @@ interface Props {
   createdAt: string;
 }
 
-export const PostHeader = () => (
+export const PostHeader = (props: Props) => (
   <View style={{ flexDirection: "row", padding: 10 }}>
     <CircleImage
       source={require("../../assets/kawaii_neco.jpg")}
@@ -17,11 +17,9 @@ export const PostHeader = () => (
       height={50}
     />
     <View style={{ flex: 1, marginHorizontal: 10 }}>
-      <Text style={{ fontSize: 20, marginBottom: 5 }}>
-        可愛い可愛い猫ちゃん
-      </Text>
+      <Text style={{ fontSize: 20, marginBottom: 5 }}>{props.name}</Text>
       <View style={{ flexDirection: "row" }}>
-        <Text>8時間前・</Text>
+        <Text>{props.createdAt}・</Text>
         <WorldIcon />
       </View>
     </View>

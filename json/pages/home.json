@@ -1,0 +1,42 @@
+{
+  "stories": [
+    {
+      "id": "story-111",
+      "user": {
+        "id": "u-111",
+        "name": "猫太郎",
+        "iconURL":
+        "https://sociopouch.files.wordpress.com/2019/08/8y3a8062.jpg?w=640&h=640"
+      },
+      "storyURL": "https://image.itmedia.co.jp/nl/articles/1907/01/masumi_190621sleepcat01.jpg",
+      "createdAt": 1577675589,
+      "viewers": [
+        {
+          "id": "u-111",
+          "name": "猫太郎",
+          "iconURL":
+          "https://sociopouch.files.wordpress.com/2019/08/8y3a8062.jpg?w=640&h=640"
+        },
+        {
+          "id": "u-111",
+          "name": "猫太郎",
+          "iconURL":
+          "https://sociopouch.files.wordpress.com/2019/08/8y3a8062.jpg?w=640&h=640"
+        }
+      ]
+    }
+  ],
+  "posts": [
+    {
+      "id": "p-111",
+      "user": {
+        "id": "u-111",
+        "name": "猫太郎",
+        "iconURL":
+        "https://sociopouch.files.wordpress.com/2019/08/8y3a8062.jpg?w=640&h=640"
+      },
+      "text": "hello world",
+      "createdAt": 1577675589
+    }
+  ]
+}

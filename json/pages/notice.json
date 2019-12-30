@@ -1,0 +1,28 @@
+{
+  "notices": [
+    {
+      "id": "n-111",
+      "user": {
+        "id": "u-111",
+        "name": "猫太郎",
+        "iconURL":
+        "https://sociopouch.files.wordpress.com/2019/08/8y3a8062.jpg?w=640&h=640"
+      },
+      "link": "fakebook://open",
+      "text": "今日は誰かの誕生日です",
+      "createdAt": 1577676309
+    },
+    {
+      "id": "n-111",
+      "user": {
+        "id": "u-111",
+        "name": "猫太郎",
+        "iconURL":
+        "https://sociopouch.files.wordpress.com/2019/08/8y3a8062.jpg?w=640&h=640"
+      },
+      "link": "fakebook://open",
+      "text": "今日は誰かの誕生日です",
+      "createdAt": 1577676309
+    }
+  ]
+}

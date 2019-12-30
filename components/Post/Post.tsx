@@ -4,10 +4,19 @@ import { PostHeader } from "./PostHeader";
 import { PostBody } from "./PostBody";
 import { PostFooter } from "./PostFooter";
 
-export const Post = () => (
+interface Props {
+  id: string;
+  text: string;
+  goodCount: number;
+  shareCount: number;
+  commentCount: number;
+  createdAt: string;
+}
+
+export const Post = (props: Props) => (
   <View style={{ backgroundColor: "white" }}>
     <PostHeader />
-    <PostBody text={"hello"} />
-    <PostFooter goodCount={30} shareCount={1} />
+    <PostBody text={props.text} />
+    <PostFooter goodCount={props.goodCount} shareCount={props.shareCount} />
   </View>
 );
