@@ -3,13 +3,21 @@ import * as React from "react";
 import { IconButtonGroup } from "./IconButtonGroup";
 import { CareerList } from "./CareerList";
 import { ProfileHeader } from "./ProfileHeader";
+import { IProfile } from "../../types/Profile";
 
-export const Page = () => (
+interface Props {
+  profile: IProfile;
+}
+
+export const Profile = (props: Props) => (
   <View style={{ backgroundColor: "#fff" }}>
-    <ProfileHeader />
+    <ProfileHeader
+      iconImageURL={props.profile.user.iconURL}
+      backgroundImageURL={props.profile.backgroundImageURL}
+    />
     <View style={{ justifyContent: "center", alignItems: "center" }}>
-      <Text style={{ fontSize: 50 }}>猫です</Text>
-      <Text>nyaaaaaaaaaaan</Text>
+      <Text style={{ fontSize: 50 }}>{props.profile.user.name}</Text>
+      <Text>{props.profile.selfDescription}</Text>
     </View>
     <IconButtonGroup />
     <CareerList />

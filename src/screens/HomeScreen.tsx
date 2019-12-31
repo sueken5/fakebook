@@ -8,10 +8,6 @@ export function HomeScreen({ navigation }) {
 
   return (
     <View style={{ backgroundColor: "gray" }}>
-      {/*<Button*/}
-      {/*  title="Go to Main"*/}
-      {/*  onPress={() => navigation.navigate("Activity")}*/}
-      {/*/>*/}
       <FlatList
         data={activities}
         renderItem={({ item }) => (

@@ -26,7 +26,7 @@ export default createMaterialTopTabNavigator(
         tabBarLabel: "グループ"
       })
     },
-    Profile: {
+    MyProfile: {
       screen: ProfileScreen,
       navigationOptions: () => ({
         tabBarLabel: "プロフィール"

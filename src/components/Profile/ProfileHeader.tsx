@@ -1,11 +1,16 @@
 import { Image, View } from "react-native";
 import * as React from "react";
 
-export const ProfileHeader = () => (
+interface Props {
+  iconImageURL: string;
+  backgroundImageURL: string;
+}
+
+export const ProfileHeader = (props: Props) => (
   <View>
     <Image
       style={{ height: 200 }}
-      source={require("../../assets/back_sakura.jpg")}
+      source={require("../../../assets/back_sakura.jpg")}
     />
     <Image
       style={{
@@ -17,7 +22,7 @@ export const ProfileHeader = () => (
         alignSelf: "center",
         marginTop: -75
       }}
-      source={require("../../assets/kawaii_neco.jpg")}
+      source={require("../../../assets/kawaii_neco.jpg")}
     />
   </View>
 );

@@ -2,7 +2,7 @@ import { Image, ImageSourcePropType, Text, View } from "react-native";
 import * as React from "react";
 
 interface Props {
-  source: ImageSourcePropType;
+  icon: React.ReactNode;
   description: string;
   isActive?: boolean;
 }
@@ -12,7 +12,7 @@ export const IconButton = (props: Props) => (
     <View style={{ padding: 10 }}>
       <View
         style={{
-          backgroundColor: props.isActive ? "#4169e1" : "d3d3d3",
+          backgroundColor: props.isActive ? "#4169e1" : "#d3d3d3",
           borderRadius: 25,
           width: 50,
           height: 50,
@@ -20,7 +20,7 @@ export const IconButton = (props: Props) => (
           justifyContent: "center"
         }}
       >
-        <Image style={{ height: 20, width: 20 }} source={props.source} />
+        {props.icon}
       </View>
     </View>
     <View>
