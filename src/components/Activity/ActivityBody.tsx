@@ -5,7 +5,7 @@ interface Props {
   text: string;
 }
 
-export const PostBody = (props: Props) => (
+export const ActivityBody = (props: Props) => (
   <View style={{ padding: 5 }}>
     <Text>{props.text}</Text>
   </View>

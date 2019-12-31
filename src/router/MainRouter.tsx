@@ -1,45 +1,45 @@
-import { Home } from "../screens/Home";
-import { FriendList } from "../screens/FriendList";
-import { GroupList } from "../screens/GroupList";
-import { Profile } from "../screens/Profile";
+import { HomeScreen } from "../screens/HomeScreen";
+import { FriendListScreen } from "../screens/FriendListScreen";
+import { GroupListScreen } from "../screens/GroupListScreen";
+import { ProfileScreen } from "../screens/ProfileScreen";
 import { createMaterialTopTabNavigator } from "react-navigation-tabs";
-import { NoticeList } from "../screens/NoticeList";
-import { Setting } from "../screens/Setting";
+import { NoticeListScreen } from "../screens/NoticeListScreen";
+import { SettingScreen } from "../screens/SettingScreen";
 
 export default createMaterialTopTabNavigator(
   {
     Home: {
-      screen: Home,
+      screen: HomeScreen,
       navigationOptions: () => ({
         tabBarLabel: "ホーム"
       })
     },
     FriendList: {
-      screen: FriendList,
+      screen: FriendListScreen,
       navigationOptions: () => ({
         tabBarLabel: "知り合い"
       })
     },
     GroupList: {
-      screen: GroupList,
+      screen: GroupListScreen,
       navigationOptions: () => ({
         tabBarLabel: "グループ"
       })
     },
     Profile: {
-      screen: Profile,
+      screen: ProfileScreen,
       navigationOptions: () => ({
         tabBarLabel: "プロフィール"
       })
     },
     NoticeList: {
-      screen: NoticeList,
+      screen: NoticeListScreen,
       navigationOptions: () => ({
         tabBarLabel: "お知らせ"
       })
     },
     Setting: {
-      screen: Setting,
+      screen: SettingScreen,
       navigationOptions: () => ({
         tabBarLabel: "設定"
       })

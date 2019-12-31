@@ -1,4 +1,4 @@
-import { Text, View } from "react-native";
+import { View } from "react-native";
 import * as React from "react";
 import { ReactionButton } from "./ReactionButton";
 import { LikeIcon } from "../Icon/LikeIcon";

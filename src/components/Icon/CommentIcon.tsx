@@ -1,9 +1,9 @@
 import { Image } from "react-native";
 import * as React from "react";
 
-export const LikeIcon = () => (
+export const CommentIcon = () => (
   <Image
     style={{ height: 20, width: 20 }}
-    source={require("../../assets/icons/like.png")}
+    source={require("../../../assets/icons/chat.png")}
   />
 );

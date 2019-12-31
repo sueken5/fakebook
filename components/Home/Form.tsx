@@ -3,7 +3,7 @@ import * as React from "react";
 import { SubmitButton } from "./SubmitButton";
 import { VideoIcon } from "./VideoIcon";
 import { SubmitButtonGroup } from "./SubmitButtonGroup";
-import { CircleImage } from "../Image/CircleImage";
+import { CircleImage } from "../../src/components/Image/CircleImage";
 import { CommentInput } from "./CommentInput";
 
 export const Form = () => (

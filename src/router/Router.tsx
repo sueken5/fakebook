@@ -1,16 +1,15 @@
 import * as React from "react";
 import { createAppContainer } from "react-navigation";
 import { createStackNavigator } from "react-navigation-stack";
-import { Home } from "../screens/Home";
-import { Profile } from "../screens/Profile";
-import { Activity } from "../screens/Activity";
-import { PostActivity } from "../screens/PostActivity";
-import { Stories } from "../screens/Stories";
-import { PostStory } from "../screens/PostStory";
-import { Group } from "../screens/Group";
-import { Media } from "../screens/Media";
-import { Search } from "../screens/Search";
-import { SearchResult } from "../screens/SearchResult";
+import { ProfileScreen } from "../screens/ProfileScreen";
+import { ActivityScreen } from "../screens/ActivityScreen";
+import { PostActivityScreen } from "../screens/PostActivityScreen";
+import { StoriesScreen } from "../screens/StoriesScreen";
+import { PostStoryScreen } from "../screens/PostStoryScreen";
+import { GroupScreen } from "../screens/GroupScreen";
+import { MediaScreen } from "../screens/MediaScreen";
+import { SearchScreen } from "../screens/SearchScreen";
+import { SearchResultScreen } from "../screens/SearchResultScreen";
 import MainRouter from "./MainRouter";
 
 const Router = createStackNavigator(
@@ -19,34 +18,34 @@ const Router = createStackNavigator(
       screen: MainRouter
     },
     Group: {
-      screen: Group,
+      screen: GroupScreen,
       path: "group/:id"
     },
     Profile: {
-      screen: Profile,
+      screen: ProfileScreen,
       path: "profile/:id"
     },
     Activity: {
-      screen: Activity,
+      screen: ActivityScreen,
       path: "activity/:id"
     },
     PostActivity: {
-      screen: PostActivity
+      screen: PostActivityScreen
     },
     Stories: {
-      screen: Stories
+      screen: StoriesScreen
     },
     PostStory: {
-      screen: PostStory
+      screen: PostStoryScreen
     },
     Media: {
-      screen: Media
+      screen: MediaScreen
     },
     Search: {
-      screen: Search
+      screen: SearchScreen
     },
     SearchResult: {
-      screen: SearchResult
+      screen: SearchResultScreen
     }
   },
   {
