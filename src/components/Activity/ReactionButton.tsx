@@ -1,4 +1,4 @@
-import { Text, View } from "react-native";
+import { Text, TouchableOpacity, View } from "react-native";
 import * as React from "react";
 
 interface Props {
@@ -7,8 +7,17 @@ interface Props {
 }
 
 export const ReactionButton = (props: Props) => (
-  <View style={{ flexDirection: "row", flex: 1, alignItems: "center" }}>
-    {props.icon}
-    <Text style={{ marginLeft: 5 }}>{props.children}</Text>
-  </View>
+  <TouchableOpacity>
+    <View
+      style={{
+        flexDirection: "row",
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center"
+      }}
+    >
+      {props.icon}
+      <Text style={{ marginLeft: 5 }}>{props.children}</Text>
+    </View>
+  </TouchableOpacity>
 );

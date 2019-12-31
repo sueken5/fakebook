@@ -8,9 +8,9 @@ export const ReactionButtonGroup = () => (
   <View
     style={{
       flexDirection: "row",
-      padding: 5,
-      justifyContent: "center",
-      width: "100%"
+      flex: 1,
+      padding: 10,
+      justifyContent: "space-around"
     }}
   >
     <ReactionButton icon={<LikeIcon />}>いいね！</ReactionButton>

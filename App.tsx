@@ -6,11 +6,12 @@ import SafeAreaView from "react-native-safe-area-view";
 
 export default function App() {
   return (
-    <SafeAreaProvider>
-      <SafeAreaView style={{ flex: 1 }}>
-        <Container />
-      </SafeAreaView>
-    </SafeAreaProvider>
+    <Container />
+    //   <SafeAreaProvider>
+    //   <SafeAreaView style={{ flex: 1 }}>
+    //     <Container />
+    //   </SafeAreaView>
+    // </SafeAreaProvider>
   );
 }
 

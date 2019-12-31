@@ -11,6 +11,8 @@ import { MediaScreen } from "../screens/MediaScreen";
 import { SearchScreen } from "../screens/SearchScreen";
 import { SearchResultScreen } from "../screens/SearchResultScreen";
 import MainRouter from "./MainRouter";
+import { ReactionsScreen } from "../screens/ReactionsScreen";
+import { CommentsScreen } from "../screens/CommentsScreen";
 
 const Router = createStackNavigator(
   {
@@ -28,6 +30,12 @@ const Router = createStackNavigator(
     Activity: {
       screen: ActivityScreen,
       path: "activity/:id"
+    },
+    Reactions: {
+      screen: ReactionsScreen
+    },
+    Comments: {
+      screen: CommentsScreen
     },
     PostActivity: {
       screen: PostActivityScreen
