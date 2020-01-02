@@ -8,10 +8,7 @@ interface Props {
 
 export const ProfileHeader = (props: Props) => (
   <View>
-    <Image
-      style={{ height: 200 }}
-      source={require("../../../assets/back_sakura.jpg")}
-    />
+    <Image style={{ height: 200 }} source={{ uri: props.backgroundImageURL }} />
     <Image
       style={{
         width: 150,
@@ -22,7 +19,7 @@ export const ProfileHeader = (props: Props) => (
         alignSelf: "center",
         marginTop: -75
       }}
-      source={require("../../../assets/kawaii_neco.jpg")}
+      source={{ uri: props.iconImageURL }}
     />
   </View>
 );

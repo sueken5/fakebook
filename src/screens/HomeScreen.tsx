@@ -1,11 +1,11 @@
 import * as React from "react";
-import { View, FlatList, Text } from "react-native";
+import { View, FlatList } from "react-native";
 import { Activity } from "../components/Activity/Activity";
-import { IActivity } from "../types/Activity";
 import { actionCreator, RootState } from "../redux";
 import { Action, Dispatch } from "redux";
 import { connect } from "react-redux";
-import { getActivities } from "../mock";
+import { getActivities, getUser } from "../mock";
+import { ActivityForm } from "../components/Activity/ActivityForm";
 
 interface Props {
   text: string;
@@ -18,6 +18,11 @@ export function HomeScreen(props: Props, { navigation }) {
   return (
     <View style={{ backgroundColor: "gray" }}>
       <FlatList
+        ListHeaderComponent={
+          <View style={{ marginBottom: 10 }}>
+            <ActivityForm user={getUser()} />
+          </View>
+        }
         data={activities}
         renderItem={({ item }) => (
           <View style={{ marginBottom: 10 }}>
