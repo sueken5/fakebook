@@ -9,32 +9,32 @@ export function ProfileScreen({ navigation }) {
   const activities = getActivities(["aa"]);
   return (
     <View style={{ backgroundColor: "gray" }}>
-      <ScrollView>
-        <View style={{ marginBottom: 10 }}>
-          <Profile profile={getProfile()} />
-        </View>
-        <FlatList
-          data={activities}
-          renderItem={({ item }) => (
-            <View style={{ marginBottom: 10 }}>
-              <Activity
-                id={item.id}
-                text={item.text}
-                goodCount={item.goodCount}
-                shareCount={item.shareCount}
-                commentCount={item.comments.length}
-                createdAt={item.createdAt}
-                user={item.user}
-                headerOnPress={() => navigation.navigate("Comments")}
-                bodyOnPress={() =>
-                  navigation.navigate("Activity", { id: "hello" })
-                }
-                reactionsOnPress={() => navigation.navigate("Reactions")}
-              />
-            </View>
-          )}
-        />
-      </ScrollView>
+      <FlatList
+        ListHeaderComponent={
+          <View style={{ marginBottom: 10 }}>
+            <Profile profile={getProfile()} />
+          </View>
+        }
+        data={activities}
+        renderItem={({ item }) => (
+          <View style={{ marginBottom: 10 }}>
+            <Activity
+              id={item.id}
+              text={item.text}
+              goodCount={item.goodCount}
+              shareCount={item.shareCount}
+              commentCount={item.comments.length}
+              createdAt={item.createdAt}
+              user={item.user}
+              headerOnPress={() => navigation.navigate("Comments")}
+              bodyOnPress={() =>
+                navigation.navigate("Activity", { id: "hello" })
+              }
+              reactionsOnPress={() => navigation.navigate("Reactions")}
+            />
+          </View>
+        )}
+      />
     </View>
   );
 }
@@ -58,7 +58,7 @@ function getProfile(): IProfile {
 function getActivities(ids: string[]): IActivity[] {
   return [
     {
-      id: "a-111",
+      id: "a-112",
       user: {
         id: "u-aaa",
         name: "kengo",
@@ -84,7 +84,7 @@ function getActivities(ids: string[]): IActivity[] {
       ]
     },
     {
-      id: "a-111",
+      id: "a-113",
       user: {
         id: "u-aaa",
         name: "kengo",
@@ -110,7 +110,7 @@ function getActivities(ids: string[]): IActivity[] {
       ]
     },
     {
-      id: "a-111",
+      id: "a-114",
       user: {
         id: "u-aaa",
         name: "kengo",
@@ -136,7 +136,7 @@ function getActivities(ids: string[]): IActivity[] {
       ]
     },
     {
-      id: "a-111",
+      id: "a-115",
       user: {
         id: "u-aaa",
         name: "kengo",
@@ -162,7 +162,7 @@ function getActivities(ids: string[]): IActivity[] {
       ]
     },
     {
-      id: "a-111",
+      id: "a-116",
       user: {
         id: "u-aaa",
         name: "kengo",

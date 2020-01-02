@@ -1,17 +1,18 @@
 import React from "react";
-import { SafeAreaProvider } from "react-native-safe-area-context";
+import { createStore } from "redux";
 import { createAppContainer } from "react-navigation";
 import Router from "./src/router/Router";
-import SafeAreaView from "react-native-safe-area-view";
+
+import { rootReducer } from "./src/redux";
+import { Provider } from "react-redux";
+
+const store = createStore(rootReducer);
 
 export default function App() {
   return (
-    <Container />
-    //   <SafeAreaProvider>
-    //   <SafeAreaView style={{ flex: 1 }}>
-    //     <Container />
-    //   </SafeAreaView>
-    // </SafeAreaProvider>
+    <Provider store={store}>
+      <Container />
+    </Provider>
   );
 }
 

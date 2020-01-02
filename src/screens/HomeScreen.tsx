@@ -1,9 +1,17 @@
 import * as React from "react";
-import { View, FlatList } from "react-native";
+import { View, FlatList, Text } from "react-native";
 import { Activity } from "../components/Activity/Activity";
 import { IActivity } from "../types/Activity";
+import { actionCreator, RootState } from "../redux";
+import { Action, Dispatch } from "redux";
+import { connect } from "react-redux";
 
-export function HomeScreen({ navigation }) {
+interface Props {
+  text: string;
+  setString: (text: string) => void;
+}
+
+export function HomeScreen(props: Props, { navigation }) {
   const activities = getActivities(["id"]);
 
   return (
@@ -32,6 +40,22 @@ export function HomeScreen({ navigation }) {
     </View>
   );
 }
+
+const mapStateToProps = (state: RootState) => {
+  return {
+    text: state.home.text
+  };
+};
+
+const mapDispatchToProps = (dispatch: Dispatch<Action>) => {
+  return {
+    setString: (text: string) => {
+      dispatch(actionCreator.home.setString({ text }));
+    }
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(HomeScreen);
 
 function getActivities(ids: string[]): IActivity[] {
   return [
@@ -62,7 +86,7 @@ function getActivities(ids: string[]): IActivity[] {
       ]
     },
     {
-      id: "a-111",
+      id: "a-112",
       user: {
         id: "u-aaa",
         name: "kengo",
@@ -88,7 +112,7 @@ function getActivities(ids: string[]): IActivity[] {
       ]
     },
     {
-      id: "a-111",
+      id: "a-113",
       user: {
         id: "u-aaa",
         name: "kengo",
@@ -114,7 +138,7 @@ function getActivities(ids: string[]): IActivity[] {
       ]
     },
     {
-      id: "a-111",
+      id: "a-114",
       user: {
         id: "u-aaa",
         name: "kengo",
@@ -140,7 +164,7 @@ function getActivities(ids: string[]): IActivity[] {
       ]
     },
     {
-      id: "a-111",
+      id: "a-115",
       user: {
         id: "u-aaa",
         name: "kengo",

@@ -1,10 +1,9 @@
-import { HomeScreen } from "../screens/HomeScreen";
+import HomeScreen from "../screens/HomeScreen";
 import { FriendListScreen } from "../screens/FriendListScreen";
 import { GroupListScreen } from "../screens/GroupListScreen";
 import { ProfileScreen } from "../screens/ProfileScreen";
 import { createMaterialTopTabNavigator } from "react-navigation-tabs";
 import { NoticeListScreen } from "../screens/NoticeListScreen";
-import { SettingScreen } from "../screens/SettingScreen";
 
 export default createMaterialTopTabNavigator(
   {
@@ -36,12 +35,6 @@ export default createMaterialTopTabNavigator(
       screen: NoticeListScreen,
       navigationOptions: () => ({
         tabBarLabel: "お知らせ"
-      })
-    },
-    Setting: {
-      screen: SettingScreen,
-      navigationOptions: () => ({
-        tabBarLabel: "設定"
       })
     }
   },

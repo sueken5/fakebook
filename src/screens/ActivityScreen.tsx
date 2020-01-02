@@ -1,5 +1,5 @@
 import * as React from "react";
-import { View } from "react-native";
+import { Alert, View } from "react-native";
 import { Activity } from "../components/Activity/Activity";
 import { IActivity } from "../types/Activity";
 
@@ -17,6 +17,9 @@ export function ActivityScreen({ navigation }) {
         shareCount={activity.shareCount}
         commentCount={activity.comments.length}
         createdAt={activity.createdAt}
+        headerOnPress={() => Alert.alert("header pressed")}
+        bodyOnPress={() => Alert.alert("body pressed")}
+        reactionsOnPress={() => Alert.alert("reactions pressed")}
       />
     </View>
   );
@@ -24,7 +27,7 @@ export function ActivityScreen({ navigation }) {
 
 function getActivity(id: string): IActivity {
   return {
-    id: "a-111",
+    id: "a-112",
     user: {
       id: "u-aaa",
       name: "kengo",

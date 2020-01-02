@@ -1,11 +1,121 @@
 import * as React from "react";
-import { Button, View, Text } from "react-native";
+import { Button, View, Text, Image, Alert, ScrollView } from "react-native";
+import { GroupPanelList } from "../components/Group/GroupPanelList";
+import { IGroup } from "../types/Group";
+import { SearchIcon } from "../components/Icon/SearchIcon";
 
 export function GroupListScreen({ navigation }) {
   return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>Activity {navigation.getParam("name", "guest")}!</Text>
-      <Button title="Go to Main" onPress={() => navigation.navigate("Home")} />
-    </View>
+    <ScrollView>
+      <View style={{ backgroundColor: "gray" }}>
+        <View
+          style={{ backgroundColor: "#ffffff", padding: 5, marginBottom: 5 }}
+        >
+          <View
+            style={{ flexDirection: "row", justifyContent: "space-between" }}
+          >
+            <Text style={{ fontSize: 30 }}>グループ</Text>
+            <View
+              style={{
+                backgroundColor: "#d3d3d3",
+                height: 30,
+                width: 30,
+                borderRadius: 15,
+                alignItems: "center",
+                justifyContent: "center"
+              }}
+            >
+              <SearchIcon />
+            </View>
+          </View>
+          <View style={{ flexDirection: "row" }}>
+            <Button
+              title={"参加しているグループ"}
+              onPress={() => Alert.alert("参加")}
+            >
+              参加しているグループ
+            </Button>
+            <Button title={"発見"} onPress={() => Alert.alert("発見")}>
+              発見
+            </Button>
+            <Button title={"作成"} onPress={() => Alert.alert("作成")}>
+              作成
+            </Button>
+          </View>
+        </View>
+        <View
+          style={{
+            backgroundColor: "#ffffff",
+            padding: 5,
+            height: 350,
+            marginBottom: 5
+          }}
+        >
+          <View
+            style={{ flexDirection: "row", justifyContent: "space-between" }}
+          >
+            <Text style={{ fontSize: 30 }}>おすすめのグループ</Text>
+            <Text>全て見る</Text>
+          </View>
+          <Text style={{ fontSize: 20, color: "gray" }}>
+            おすすめのグループ
+          </Text>
+          <GroupPanelList
+            groups={getGroups()}
+            onPressPanel={(id: string) => {
+              navigation.navigate("Group", { id });
+            }}
+          />
+        </View>
+        <View style={{ backgroundColor: "#ffffff", padding: 5, height: 350 }}>
+          <View
+            style={{ flexDirection: "row", justifyContent: "space-between" }}
+          >
+            <Text style={{ fontSize: 30 }}>おすすめのグループ</Text>
+            <Text>全て見る</Text>
+          </View>
+          <Text style={{ fontSize: 20, color: "gray" }}>
+            おすすめのグループ
+          </Text>
+          <GroupPanelList
+            groups={getGroups()}
+            onPressPanel={(id: string) => {
+              return () => {
+                navigation.navigate("Group", { id });
+              };
+            }}
+          />
+        </View>
+      </View>
+    </ScrollView>
   );
+}
+
+function getGroups(): IGroup[] {
+  return [
+    {
+      id: "1---1",
+      name: "ニャンコクラブ",
+      members: [],
+      imageURL:
+        "https://dol.ismcdn.jp/mwimgs/8/d/670m/img_8db0612c13c0013326bfb1b66431df95645897.jpg",
+      createdAt: Date.now()
+    },
+    {
+      id: "2",
+      name: "ニャンコクラブ",
+      members: [],
+      imageURL:
+        "https://dol.ismcdn.jp/mwimgs/8/d/670m/img_8db0612c13c0013326bfb1b66431df95645897.jpg",
+      createdAt: Date.now()
+    },
+    {
+      id: "3",
+      name: "ニャンコクラブ",
+      members: [],
+      imageURL:
+        "https://dol.ismcdn.jp/mwimgs/8/d/670m/img_8db0612c13c0013326bfb1b66431df95645897.jpg",
+      createdAt: Date.now()
+    }
+  ];
 }

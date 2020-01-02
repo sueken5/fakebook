@@ -21,7 +21,7 @@ export function NoticeListScreen({ navigation }) {
 
 function getNotice(): INotice {
   return {
-    id: "add-",
+    id: "add-1010",
     user: {
       id: "u-aa",
       name: "kengo",
