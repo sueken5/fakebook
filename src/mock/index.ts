@@ -3,6 +3,24 @@ import uuid from "uuid";
 import { IUser } from "../types/User";
 import { IProfile } from "../types/Profile";
 import { INotice } from "../types/Notice";
+import { IGroup } from "../types/Group";
+
+export function getGroup(): IGroup {
+  return {
+    id: uuid(),
+    name: "ニャンコクラブ",
+    members: [getUser()],
+    imageURL:
+      "https://dol.ismcdn.jp/mwimgs/8/d/670m/img_8db0612c13c0013326bfb1b66431df95645897.jpg",
+    createdAt: Date.now(),
+    description: "hello",
+    isPublic: true
+  };
+}
+
+export function getGroups(): IGroup[] {
+  return [getGroup(), getGroup(), getGroup()];
+}
 
 export function getNotice(): INotice {
   return {

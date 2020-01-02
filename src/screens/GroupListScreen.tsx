@@ -1,8 +1,8 @@
 import * as React from "react";
 import { Button, View, Text, Image, Alert, ScrollView } from "react-native";
 import { GroupPanelList } from "../components/Group/GroupPanelList";
-import { IGroup } from "../types/Group";
 import { SearchIcon } from "../components/Icon/SearchIcon";
+import { getGroups } from "../mock";
 
 export function GroupListScreen({ navigation }) {
   return (
@@ -89,33 +89,4 @@ export function GroupListScreen({ navigation }) {
       </View>
     </ScrollView>
   );
-}
-
-function getGroups(): IGroup[] {
-  return [
-    {
-      id: "1---1",
-      name: "ニャンコクラブ",
-      members: [],
-      imageURL:
-        "https://dol.ismcdn.jp/mwimgs/8/d/670m/img_8db0612c13c0013326bfb1b66431df95645897.jpg",
-      createdAt: Date.now()
-    },
-    {
-      id: "2",
-      name: "ニャンコクラブ",
-      members: [],
-      imageURL:
-        "https://dol.ismcdn.jp/mwimgs/8/d/670m/img_8db0612c13c0013326bfb1b66431df95645897.jpg",
-      createdAt: Date.now()
-    },
-    {
-      id: "3",
-      name: "ニャンコクラブ",
-      members: [],
-      imageURL:
-        "https://dol.ismcdn.jp/mwimgs/8/d/670m/img_8db0612c13c0013326bfb1b66431df95645897.jpg",
-      createdAt: Date.now()
-    }
-  ];
 }
