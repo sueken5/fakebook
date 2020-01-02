@@ -5,6 +5,7 @@ import { IActivity } from "../types/Activity";
 import { actionCreator, RootState } from "../redux";
 import { Action, Dispatch } from "redux";
 import { connect } from "react-redux";
+import { getActivities } from "../mock";
 
 interface Props {
   text: string;
@@ -12,7 +13,7 @@ interface Props {
 }
 
 export function HomeScreen(props: Props, { navigation }) {
-  const activities = getActivities(["id"]);
+  const activities = getActivities();
 
   return (
     <View style={{ backgroundColor: "gray" }}>
@@ -56,138 +57,3 @@ const mapDispatchToProps = (dispatch: Dispatch<Action>) => {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(HomeScreen);
-
-function getActivities(ids: string[]): IActivity[] {
-  return [
-    {
-      id: "a-111",
-      user: {
-        id: "u-aaa",
-        name: "kengo",
-        iconURL:
-          "https://sociopouch.files.wordpress.com/2019/08/8y3a8062.jpg?w=640&h=640"
-      },
-      text: "hello world",
-      createdAt: Date.now(),
-      goodCount: 100,
-      shareCount: 10,
-      comments: [
-        {
-          id: "c-111",
-          user: {
-            id: "u-aaa",
-            name: "kengo",
-            iconURL:
-              "https://sociopouch.files.wordpress.com/2019/08/8y3a8062.jpg?w=640&h=640"
-          },
-          text: "hello kengo",
-          createdAt: Date.now()
-        }
-      ]
-    },
-    {
-      id: "a-112",
-      user: {
-        id: "u-aaa",
-        name: "kengo",
-        iconURL:
-          "https://sociopouch.files.wordpress.com/2019/08/8y3a8062.jpg?w=640&h=640"
-      },
-      text: "hello world",
-      createdAt: Date.now(),
-      goodCount: 100,
-      shareCount: 10,
-      comments: [
-        {
-          id: "c-111",
-          user: {
-            id: "u-aaa",
-            name: "kengo",
-            iconURL:
-              "https://sociopouch.files.wordpress.com/2019/08/8y3a8062.jpg?w=640&h=640"
-          },
-          text: "hello kengo",
-          createdAt: Date.now()
-        }
-      ]
-    },
-    {
-      id: "a-113",
-      user: {
-        id: "u-aaa",
-        name: "kengo",
-        iconURL:
-          "https://sociopouch.files.wordpress.com/2019/08/8y3a8062.jpg?w=640&h=640"
-      },
-      text: "hello world",
-      createdAt: Date.now(),
-      goodCount: 100,
-      shareCount: 10,
-      comments: [
-        {
-          id: "c-111",
-          user: {
-            id: "u-aaa",
-            name: "kengo",
-            iconURL:
-              "https://sociopouch.files.wordpress.com/2019/08/8y3a8062.jpg?w=640&h=640"
-          },
-          text: "hello kengo",
-          createdAt: Date.now()
-        }
-      ]
-    },
-    {
-      id: "a-114",
-      user: {
-        id: "u-aaa",
-        name: "kengo",
-        iconURL:
-          "https://sociopouch.files.wordpress.com/2019/08/8y3a8062.jpg?w=640&h=640"
-      },
-      text: "hello world",
-      createdAt: Date.now(),
-      goodCount: 100,
-      shareCount: 10,
-      comments: [
-        {
-          id: "c-111",
-          user: {
-            id: "u-aaa",
-            name: "kengo",
-            iconURL:
-              "https://sociopouch.files.wordpress.com/2019/08/8y3a8062.jpg?w=640&h=640"
-          },
-          text: "hello kengo",
-          createdAt: Date.now()
-        }
-      ]
-    },
-    {
-      id: "a-115",
-      user: {
-        id: "u-aaa",
-        name: "kengo",
-        iconURL:
-          "https://sociopouch.files.wordpress.com/2019/08/8y3a8062.jpg?w=640&h=640"
-      },
-      text: "hello world",
-      createdAt: Date.now(),
-      goodCount: 100,
-      shareCount: 10,
-      comments: [
-        {
-          id: "c-111",
-          user: {
-            id: "u-aaa",
-            name: "kengo",
-            iconURL:
-              "https://sociopouch.files.wordpress.com/2019/08/8y3a8062.jpg?w=640&h=640"
-          },
-          text: "hello kengo",
-          createdAt: Date.now()
-        }
-      ]
-    }
-  ];
-}
