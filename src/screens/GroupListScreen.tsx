@@ -3,45 +3,34 @@ import { Button, View, Text, Image, Alert, ScrollView } from "react-native";
 import { GroupPanelList } from "../components/Group/GroupPanelList";
 import { SearchIcon } from "../components/Icon/SearchIcon";
 import { getGroups } from "../mock";
+import { ScreenHeader } from "../components/Screen/ScreenHeader";
 
 export function GroupListScreen({ navigation }) {
   return (
     <ScrollView>
       <View style={{ backgroundColor: "gray" }}>
-        <View
-          style={{ backgroundColor: "#ffffff", padding: 5, marginBottom: 5 }}
-        >
-          <View
-            style={{ flexDirection: "row", justifyContent: "space-between" }}
-          >
-            <Text style={{ fontSize: 30 }}>グループ</Text>
-            <View
-              style={{
-                backgroundColor: "#d3d3d3",
-                height: 30,
-                width: 30,
-                borderRadius: 15,
-                alignItems: "center",
-                justifyContent: "center"
-              }}
-            >
-              <SearchIcon />
-            </View>
-          </View>
-          <View style={{ flexDirection: "row" }}>
-            <Button
-              title={"参加しているグループ"}
-              onPress={() => Alert.alert("参加")}
-            >
-              参加しているグループ
-            </Button>
-            <Button title={"発見"} onPress={() => Alert.alert("発見")}>
-              発見
-            </Button>
-            <Button title={"作成"} onPress={() => Alert.alert("作成")}>
-              作成
-            </Button>
-          </View>
+        <View style={{ marginBottom: 10 }}>
+          <ScreenHeader
+            name={"グループ"}
+            buttons={[
+              {
+                key: "参加しているグループ",
+                onPress: () => Alert.alert("参加")
+              },
+              {
+                key: "発見",
+                onPress: () => Alert.alert("発見")
+              },
+              {
+                key: "作成",
+                onPress: () => Alert.alert("作成")
+              },
+              {
+                key: "設定",
+                onPress: () => Alert.alert("設定")
+              }
+            ]}
+          />
         </View>
         <View
           style={{

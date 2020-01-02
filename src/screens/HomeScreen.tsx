@@ -36,7 +36,7 @@ export function HomeScreen(props: Props, { navigation }) {
               user={item.user}
               headerOnPress={() => navigation.navigate("Comments")}
               bodyOnPress={() =>
-                navigation.navigate("Activity", { id: "hello" })
+                navigation.navigate("Activity", { id: item.id })
               }
               reactionsOnPress={() => navigation.navigate("Reactions")}
             />

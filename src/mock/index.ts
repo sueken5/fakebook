@@ -49,7 +49,7 @@ export function getProfile(): IProfile {
 export function getUser(): IUser {
   return {
     id: uuid(),
-    name: "kengo",
+    name: "ネッコ",
     iconURL:
       "https://sociopouch.files.wordpress.com/2019/08/8y3a8062.jpg?w=640&h=640"
   };

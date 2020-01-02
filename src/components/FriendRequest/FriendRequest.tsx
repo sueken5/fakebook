@@ -19,15 +19,19 @@ interface Props {
 
 export const FriendRequest = (props: Props) => (
   <TouchableOpacity onPress={props.onPress}>
-    <View style={{ backgroundColor: "white", flexDirection: "row" }}>
+    <View style={styles.container}>
       <Image style={styles.mainIcon} source={{ uri: props.user.iconURL }} />
-      <View>
-        <Text>{props.user.name}</Text>
+      <View style={{ padding: 5 }}>
+        <View style={{ marginBottom: 5 }}>
+          <Text style={{ fontSize: 20 }}>{props.user.name}</Text>
+        </View>
         <View style={{ flexDirection: "row" }}>
-          <Image
-            style={styles.miniIcon}
-            source={{ uri: props.commonFriends[0].iconURL }}
-          />
+          <View style={{ marginRight: 5 }}>
+            <Image
+              style={styles.miniIcon}
+              source={{ uri: props.commonFriends[0].iconURL }}
+            />
+          </View>
           <Text>共通の友達{props.commonFriends.length}人</Text>
         </View>
         <View style={{ flexDirection: "row" }}>
@@ -43,6 +47,12 @@ export const FriendRequest = (props: Props) => (
 );
 
 const styles = StyleSheet.create({
+  container: {
+    backgroundColor: "white",
+    flexDirection: "row",
+    padding: 5,
+    alignItems: "center"
+  },
   mainIcon: {
     height: 100,
     width: 100,

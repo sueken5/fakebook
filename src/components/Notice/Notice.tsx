@@ -10,23 +10,27 @@ interface Props {
 
 export const Notice = (props: Props) => (
   <TouchableOpacity>
-    <View style={{ flexDirection: "row", backgroundColor: "#fff" }}>
+    <View
+      style={{
+        flexDirection: "row",
+        backgroundColor: "#fff",
+        alignItems: "center"
+      }}
+    >
       <View style={{ padding: 10 }}>
         <Image
-          style={{ height: 90, width: 90, borderRadius: 50 }}
+          style={{ height: 70, width: 70, borderRadius: 35 }}
           source={{ uri: props.notice.user.iconURL }}
         />
       </View>
       <View
         style={{
           flex: 5,
-          justifyContent: "space-between",
-          paddingHorizontal: 5,
-          paddingVertical: 10
+          padding: 10
         }}
       >
         <View>
-          <Text style={{ fontSize: 18 }}>{props.notice.text}</Text>
+          <Text style={{ fontSize: 20 }}>{props.notice.text}</Text>
         </View>
         <View>
           <Text>{props.notice.createdAt}</Text>
