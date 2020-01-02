@@ -1,4 +1,4 @@
-import HomeScreen from "../screens/HomeScreen";
+import { HomeScreen } from "../screens/HomeScreen";
 import { FriendListScreen } from "../screens/FriendListScreen";
 import { GroupListScreen } from "../screens/GroupListScreen";
 import { ProfileScreen } from "../screens/ProfileScreen";

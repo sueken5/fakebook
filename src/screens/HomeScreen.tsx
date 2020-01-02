@@ -1,18 +1,10 @@
 import * as React from "react";
 import { View, FlatList } from "react-native";
 import { Activity } from "../components/Activity/Activity";
-import { actionCreator, RootState } from "../redux";
-import { Action, Dispatch } from "redux";
-import { connect } from "react-redux";
 import { getActivities, getUser } from "../mock";
 import { ActivityForm } from "../components/Activity/ActivityForm";
 
-interface Props {
-  text: string;
-  setString: (text: string) => void;
-}
-
-export function HomeScreen(props: Props, { navigation }) {
+export function HomeScreen({ navigation }) {
   const activities = getActivities();
 
   return (
@@ -46,19 +38,3 @@ export function HomeScreen(props: Props, { navigation }) {
     </View>
   );
 }
-
-const mapStateToProps = (state: RootState) => {
-  return {
-    text: state.home.text
-  };
-};
-
-const mapDispatchToProps = (dispatch: Dispatch<Action>) => {
-  return {
-    setString: (text: string) => {
-      dispatch(actionCreator.home.setString({ text }));
-    }
-  };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(HomeScreen);
